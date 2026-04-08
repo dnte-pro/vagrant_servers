@@ -1,0 +1,97 @@
+Bringing machine 'default' up with 'libvirt' provider...
+==> default: Checking if box 'eurolinux-vagrant/centos-stream-9' version '9.0.48' is up to date...
+==> default: Creating image (snapshot of base box volume).
+==> default: Creating domain with the following settings...
+==> default:  -- Name:              vms_default
+==> default:  -- Description:       Source: /home/dan/Devops/vagrant/vms/Vagrantfile
+==> default:  -- Domain type:       kvm
+==> default:  -- Cpus:              1
+==> default:  -- Feature:           acpi
+==> default:  -- Feature:           apic
+==> default:  -- Feature:           pae
+==> default:  -- Clock offset:      utc
+==> default:  -- Memory:            512M
+==> default:  -- Management MAC:    
+==> default:  -- Loader:            
+==> default:  -- Nvram:             
+==> default:  -- Base box:          eurolinux-vagrant/centos-stream-9
+==> default:  -- Storage pool:      default
+==> default:  -- Image():     /var/lib/libvirt/images/vms_default.img, 80G
+==> default:  -- Disk driver opts:  cache='default'
+==> default:  -- Kernel:            
+==> default:  -- Initrd:            
+==> default:  -- Graphics Type:     vnc
+==> default:  -- Graphics Port:     -1
+==> default:  -- Graphics IP:       127.0.0.1
+==> default:  -- Graphics Password: Not defined
+==> default:  -- Video Type:        cirrus
+==> default:  -- Video VRAM:        9216
+==> default:  -- Video 3D accel:    false
+==> default:  -- Sound Type:	
+==> default:  -- Keymap:            en-us
+==> default:  -- TPM Backend:       passthrough
+==> default:  -- TPM Path:          
+==> default:  -- INPUT:             type=mouse, bus=ps2
+==> default: Creating shared folders metadata...
+==> default: Starting domain.
+/usr/lib/ruby/vendor_ruby/fog/libvirt/requests/compute/vm_action.rb:7:in `create': Call to virDomainCreateWithFlags failed: Unable to get index for interface eth0: No such device (Libvirt::Error)
+	from /usr/lib/ruby/vendor_ruby/fog/libvirt/requests/compute/vm_action.rb:7:in `vm_action'
+	from /usr/lib/ruby/vendor_ruby/fog/libvirt/models/compute/server.rb:76:in `start'
+	from /usr/share/rubygems-integration/all/gems/vagrant-libvirt-0.7.0/lib/vagrant-libvirt/action/start_domain.rb:399:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-libvirt-0.7.0/lib/vagrant-libvirt/action/set_boot_order.rb:80:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-libvirt-0.7.0/lib/vagrant-libvirt/action/create_network_interfaces.rb:190:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-libvirt-0.7.0/lib/vagrant-libvirt/action/create_networks.rb:93:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-libvirt-0.7.0/lib/vagrant-libvirt/action/share_folders.rb:22:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-libvirt-0.7.0/lib/vagrant-libvirt/action/prepare_nfs_settings.rb:21:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/builtin/synced_folders.rb:87:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/builtin/delayed.rb:19:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/builtin/synced_folder_cleanup.rb:28:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/plugins/synced_folders/nfs/action_cleanup.rb:25:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-libvirt-0.7.0/lib/vagrant-libvirt/action/prepare_nfs_valid_ids.rb:14:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/builtin/provision.rb:80:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-libvirt-0.7.0/lib/vagrant-libvirt/action/create_domain.rb:443:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-libvirt-0.7.0/lib/vagrant-libvirt/action/create_domain_volume.rb:94:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-libvirt-0.7.0/lib/vagrant-libvirt/action/handle_box_image.rb:123:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/builtin/handle_box.rb:56:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-libvirt-0.7.0/lib/vagrant-libvirt/action/handle_storage_pool.rb:63:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-libvirt-0.7.0/lib/vagrant-libvirt/action/set_name_of_domain.rb:34:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:127:in `block in finalize_action'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/builder.rb:149:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/runner.rb:89:in `block in run'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/util/busy.rb:19:in `busy'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/runner.rb:89:in `run'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/builtin/call.rb:53:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/builtin/box_check_outdated.rb:93:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/builtin/config_validate.rb:25:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/warden.rb:48:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/builder.rb:149:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/runner.rb:89:in `block in run'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/util/busy.rb:19:in `busy'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/action/runner.rb:89:in `run'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/machine.rb:246:in `action_raw'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/machine.rb:215:in `block in action'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/environment.rb:614:in `lock'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/machine.rb:201:in `call'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/machine.rb:201:in `action'
+	from /usr/share/rubygems-integration/all/gems/vagrant-2.2.19/lib/vagrant/batch_action.rb:86:in `block (2 levels) in run'

@@ -1,0 +1,1 @@
+{"rsync":{"/opt/scripts":{"type":"rsync","guestpath":"/opt/scripts","hostpath":"/home/dan/Devops/vagrant/vms/scripts","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
